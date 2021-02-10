@@ -26,6 +26,7 @@ public class ItemsController {
     @RequestMapping("/add")
     public String add(Items items) {
         System.out.println("请求到来");
+        // 添加到数据库
         int row = itemsService.add(items);
         return "redirect:/items/findAll";
     }
